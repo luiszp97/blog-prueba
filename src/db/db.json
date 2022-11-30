@@ -1,0 +1,31 @@
+{
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Luis",
+      "lastname": "Zambrano",
+      "email": "a@a.com",
+      "brithday": "",
+      "username": "luiszp97",
+      "password": "123456"
+    },
+    {
+      "firstname": "carmen",
+      "lastname": "parra",
+      "username": "cap",
+      "email": "ab@a.com",
+      "password": "12345",
+      "brithday": "2022-11-08",
+      "id": "2"
+    },
+    {
+      "firstname": "gabriel",
+      "lastname": "parra",
+      "username": "s",
+      "email": "j@j.com",
+      "password": "234",
+      "brithday": "2022-11-12",
+      "id": "3"
+    }
+  ]
+}
