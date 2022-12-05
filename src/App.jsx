@@ -3,7 +3,7 @@
 // import { Link as RouterLink } from 'react-router-dom'
 import { LoginPage } from './auth/pages/LoginPage'
 import { RegisterPage } from './auth/pages/RegisterPage'
-import { PerfilPage } from './perfil/pages/PerfilPage'
+import { HomePage } from './perfil/pages/HomePage'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
      
     // <LoginPage/>
     // <RegisterPage/>
-    <PerfilPage/>
+    <HomePage/>
  
         
   )

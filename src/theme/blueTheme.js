@@ -5,7 +5,9 @@ export const blueTheme = createTheme({
     palette:{
         
         primary: {
-            main: '#ffe0b2'
+            main: '#ffe0b2',
+            secondary: '#fbe9e7',
+            dark: '#eeeeee'
         },
         secondary:{
             main: '#ffcc80'
@@ -15,6 +17,9 @@ export const blueTheme = createTheme({
         },
         input:{
             msin: "#000"
+        },
+        fontColor:{
+            main: "#424242"
         }
     }
 
