@@ -1,4 +1,4 @@
-import { Divider, List, ListItem, Typography } from "@mui/material"
+import { Box, Divider, List, ListItem, Typography } from "@mui/material"
 import { CardsLayout } from "../layout/CardsLayout"
 
 
@@ -6,22 +6,30 @@ export const GoalsInfo = () => {
   return (
 
     <CardsLayout heighthCard = {"20"}>
-        <Typography variant="h4" fontWeight='bold' fontSize={25} mb={1}>
+      
+      <Box height="25%">
+        <Typography variant="h6" fontWeight='bold'>
             Goals
         </Typography>
         <Divider/>
+      </Box>
+
+
+      <Box height="75%" display='flex' alignItems='center'>
 
         <List sx={{display:'inline-block', listStyleType:'circle', "& ::marker":{color:'#999', listStyleType:'circle'} }}>
           <ListItem disablePadding = {true} sx={{"& ::marker":{color:'#999', listStyleType:'circle'}}}>
-            Aprender multiles lenguajes de programacion
+            <Typography fontSize='0.9rem'>Aprender multiles lenguajes de programacion</Typography>
           </ListItem>
           <ListItem disablePadding = {true}>
-            Dominar React
+            <Typography fontSize='0.9rem'>Dominar React</Typography>
           </ListItem>
           <ListItem disablePadding = {true}>
-            Dominar el ingles
+            <Typography fontSize='0.9rem'>Aprender Ingles</Typography>
           </ListItem>
         </List>
+
+      </Box>
     </CardsLayout>
 
   )

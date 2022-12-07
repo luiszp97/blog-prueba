@@ -16,7 +16,7 @@ export const blueTheme = createTheme({
             main: '#d50000'
         },
         input:{
-            msin: "#000"
+            main: "#000"
         },
         fontColor:{
             main: "#424242"

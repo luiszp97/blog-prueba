@@ -9,7 +9,7 @@ export const CardsLayout = ({children, heighthCard, scroll}) => {
 
         <Card sx={{height:'100%',width:'95%', backgroundColor: "primary.secondary" , display:'flex', justifyContent:'center', alignItems:'center'}}>
 
-            <Box sx={{width:'90%', height:'90%', overflowY:`${scroll ?'scroll': 'hidde'}`, '::-webkit-scrollbar-thumb':{borderRadius:'10px', background:'#fafafa'},'::-webkit-scrollbar':{width:'10px'}}}>
+            <Box sx={{width:'90%', height:'90%', overflowY:`${scroll ?'scroll': 'hidde'}`, '::-webkit-scrollbar-thumb':{borderRadius:'10px', background:'#eeeeee'},'::-webkit-scrollbar':{width:'10px'}}}>
 
                 {children}
 

@@ -13,14 +13,16 @@ export const HomePageLayout = ({children}) => {
             sx={{display: 'flex', flexGrow: 1, padding: '30px 80px', width: '100vw', height:'100%'}}
         >
             <Box
-                sx={{display:'flex', flexDirection:'column', backgroundColor: '#fbe9e7', height: '100%', justifyContent:'space-evenly', alignItems:'center', borderRadius: '4px'}}
+                sx={{display:'flex', flexDirection:'column', backgroundColor: '#fbe9e7', justifyContent:'space-evenly', alignItems:'center', borderRadius: '4px'}}
             >
                 {children[0]}
                 
 
             </Box>
 
-            <Grid container sx={{height:'100%', justifyContent:'space-between', flexDirection:'row', flexWrap:'nowrap'  }}>
+            <Grid container 
+
+             sx={{ justifyContent:'space-between', flexDirection:'row', flexWrap:'nowrap'  }}>
 
              <Grid container alignContent='space-between'>
 

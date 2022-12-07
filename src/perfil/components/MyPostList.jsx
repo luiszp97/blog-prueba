@@ -6,77 +6,80 @@ import { CardsLayout } from "../layout/CardsLayout"
 
 
 export const MyPostList = () => {
+
+  const post = [
+    {
+      title: "Calentamineto Global",
+      date: "12/22/2022",
+      id:"111"
+    },
+    {
+      title: 'DarkSouls 3',
+      date: "10-01-2022",
+      id:"232"
+    },
+    {
+      title: "Calentamineto Global",
+      date: "12/22/2022",
+      id:'3123'
+
+    },
+    {
+      title: 'DarkSouls 3',
+      date: "10-01-2022",
+      id:"312312"
+    },
+    {
+      title: "Calentamineto Global",
+      date: "12/22/2022",
+      id:'5654'
+    },
+    {
+      title: 'DarkSouls 3',
+      date: "10-01-2022",
+      id:"43534"
+    },
+
+]
+
   return (
     <CardsLayout heighthCard = {"35"} scroll={true}>
-      <Box sx={{display:'flex'}}>
-        <Typography variant="h4" fontWeight='bold' fontSize={25} sx={{position:'sticky'}} >
+
+      <Box sx={{display:'flex', justifyContent:'space-between'}}>
+
+        <Typography variant="h6" fontWeight='bold' >
             My recents Post
         </Typography>
-        <Button variant="outlined" sx={{backgroundColor:'#111', borderRadius:'50%', width:'5x'}}>
-         <AddIcon/>
+
+        <Button variant="outlined" sx={{backgroundColor:'#ffccbc', borderRadius:'50%', marginRight:'10px', width:"2px", minWidth:'0px', marginBottom:"2px", ":hover":{backgroundColor:"rgb(213 0 0 / 16%)"}}}>
+
+         <AddIcon fontSize="5px" htmlColor="black"/>
+
         </Button>
 
       </Box>
+
         <Divider/>
 
         <Box component='div'>
           <List>
-            
-            <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df',    width:'95%',":hover":{backgroundColor:'#e3ccc9'}}}>
-                <Typography fontWeight='400'>
-                  Calentamineto Global
-                </Typography>
-                <Typography>
-                  12-22-2022
-                </Typography>
 
-            </ListItemButton>
-            <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df',    width:'95%',":hover":{backgroundColor:'#e3ccc9'}}}>
-                <Typography>
-                  hola
-                </Typography>
-                <Typography>
-                  hola
-                </Typography>
+            {
+              post.map(element => (
+                <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df', width:'95%',":hover":{backgroundColor:'#e3ccc9'}}} key = {element.id}>
 
-            </ListItemButton>
-            <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df',    width:'95%',":hover":{backgroundColor:'#e3ccc9'}}}>
-                <Typography>
-                  hola
-                </Typography>
-                <Typography>
-                  hola
-                </Typography>
+                  <Typography fontWeight='400'>
+                    {element.title}
+                  </Typography>
+                  <Typography>
+                    {element.date}
+                  </Typography>
 
-            </ListItemButton>
-            <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df',    width:'95%',":hover":{backgroundColor:'#e3ccc9'}}}>
-                <Typography>
-                  hola
-                </Typography>
-                <Typography>
-                  hola
-                </Typography>
+                </ListItemButton>
+              ))
 
-            </ListItemButton>
-            <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df',    width:'95%',":hover":{backgroundColor:'#e3ccc9'}}}>
-                <Typography>
-                  hola
-                </Typography>
-                <Typography>
-                  hola
-                </Typography>
-
-            </ListItemButton>
-            <ListItemButton sx={{justifyContent:'space-between', borderRadius:'10px', marginBottom:'8px', backgroundColor:'#fce2df',    width:'95%',":hover":{backgroundColor:'#e3ccc9'}}}>
-                <Typography>
-                  hola
-                </Typography>
-                <Typography>
-                  hola
-                </Typography>
-
-            </ListItemButton>
-            
+            }
+        
           </List>
         </Box>
 
