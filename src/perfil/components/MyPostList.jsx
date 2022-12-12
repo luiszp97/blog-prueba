@@ -2,6 +2,7 @@ import { Button, Divider, List, ListItem, ListItemButton, Typography } from "@mu
 import AddIcon from '@mui/icons-material/Add';
 import { Box } from "@mui/system"
 import { CardsLayout } from "../layout/CardsLayout"
+import { Navigate } from "react-router-dom";
 
 
 
@@ -52,7 +53,7 @@ export const MyPostList = () => {
         </Typography>
 
         <Button variant="outlined" sx={{backgroundColor:'#ffccbc', borderRadius:'50%', marginRight:'10px', width:"2px", minWidth:'0px', marginBottom:"2px", ":hover":{backgroundColor:"rgb(213 0 0 / 16%)"}}}>
-
+          <Navigate to='/posts'/>
          <AddIcon fontSize="5px" htmlColor="black"/>
 
         </Button>

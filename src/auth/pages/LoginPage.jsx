@@ -1,6 +1,7 @@
 import { Button, Grid, Link, TextField } from "@mui/material"
-import { useForm } from "react-hook-form"
 import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form"
+import { Link as RouterLink } from 'react-router-dom'
 import { startLoginUser } from "../../store/auth/thunks";
 import { AuthLayout } from "../layout"
 
@@ -57,7 +58,7 @@ export const LoginPage = () => {
             justifyContent='end' 
             sx={{mt:2}}
             >
-            <Link color='inherit' component='a' href='/'>
+            <Link color='inherit' component={RouterLink} href='auth/register'>
                 crear cuenta
             </Link>
             </Grid>

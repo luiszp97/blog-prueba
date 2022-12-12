@@ -1,0 +1,21 @@
+
+  const [ info, setInfo ] = useState(null)
+  const {id} = useParams();
+
+  const dispatch = useDispatch();
+  const userInfo = JSON.parse(localStorage.getItem('user'));
+
+  dispatch(login(userInfo))
+
+  console.log(id, location.href)
+
+
+  const data = async() => {
+    const datos = await getUserInfo(id);
+    setInfo(datos)
+  }
+  console.log(info,'info')
+
+  useEffect(()=>{
+    data()
+  }, [])

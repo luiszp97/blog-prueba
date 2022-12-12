@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link as RouterLink, Navigate } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,9 +14,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 import { AutoStories } from '@mui/icons-material';
+import { Link } from '@mui/material';
 
 const pages = ['Perfil', 'Posts', 'Create New Post'];
-const settings = ['Profile', 'Logout'];
+const settings = ['profile', 'logout'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -35,6 +37,10 @@ function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const hola = (rote)=>{
+    location.href = `${rote}`
+  }
 
   return (
     <AppBar position="static">
@@ -150,7 +156,7 @@ function NavBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Link color = 'inherit' sx={{textDecoration:'none'}} component = {RouterLink} onClick={()=> hola(setting)}>{setting}</Link>
                 </MenuItem>
               ))}
             </Menu>
