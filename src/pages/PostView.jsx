@@ -10,7 +10,7 @@ export const PostView = () => {
             
             <Typography variant="h4" fontWeight='500' textAlign='center' mt={3} mb={3}> Calentamiento Global</Typography>
 
-            <Grid item height='50vh' width={} sx={{'img':{width:"100%", height:'auto', borderRadius:'8px'}}}>
+            <Grid item height='50vh' width="80%" sx={{'img':{width:"100%", height:'auto', borderRadius:'8px'}}}>
                 <img
                     src="https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg"
                 />
