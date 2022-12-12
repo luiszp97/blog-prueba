@@ -1,7 +1,9 @@
 import { Avatar, Card, CardContent, Grid, List, ListItem, ListSubheader, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 
-export const PerfilInfo = () => {
+
+export const PerfilInfo = ({info}) => {
+
   return (
     <>
       <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'    width="100%">
@@ -14,7 +16,7 @@ export const PerfilInfo = () => {
                     </Avatar>
 
                     <Typography variant = 'h5' fontWeight='500' sx={{mt:1}}>
-                        Luis Zambrano
+                       {`${info.firstname} ${info.lastname}`}
                     </Typography>
 
                     <Typography variant="subtitle2" color='error.main' sx={{fontWeight:'bold'}}>

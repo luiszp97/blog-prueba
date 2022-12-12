@@ -5,7 +5,7 @@ export const startRegisterUser = ( info )=>{
     
     return async ( dispatch ) =>{
 
-        const resp = await fetch( "http://localhost:3004/profile" );
+        const resp = await fetch( "http://localhost:3004/users" );
         const data = await resp.json();
 
         const existingEmail = data.some ( user => user.email === info.email )
@@ -14,9 +14,8 @@ export const startRegisterUser = ( info )=>{
         if(!existingEmail && !existingUsername){
 
             const userInfo = {...info, id: `${data.length+1}` }
-            console.log(userInfo)
 
-            await fetch( "http://localhost:3004/profile", {
+            await fetch( "http://localhost:3004/users", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -25,6 +24,9 @@ export const startRegisterUser = ( info )=>{
             } )
 
             dispatch ( login( userInfo ) )
+
+            const stringifyData = JSON.stringify({...userInfo, status:'authenticated'});
+            localStorage.setItem('user', stringifyData)
 
         }
 
@@ -41,14 +43,20 @@ export const startRegisterUser = ( info )=>{
 export const startLoginUser = ( info ) => {
     return async ( dispatch )=>{
 
-        const resp = await fetch( "http://localhost:3004/profile" );
+        const resp = await fetch( "http://localhost:3004/users" );
         const data = await resp.json();
 
-        const existingUser = data.some ( user => user.email === info.email && user.password.length === info.password.length )
+        const existingUser = data.some( user => user.email === info.email && user.password.length === info.password.length )
             
         if(existingUser){
+
            const index =  data.findIndex( user => user.email === info.email);
+           const stringifyData = JSON.stringify({...data[index], status:'authenticated'})
+
            dispatch( login( data[index] ) )
+
+           localStorage.setItem('user', stringifyData)
         }
     }
-}
+};
+

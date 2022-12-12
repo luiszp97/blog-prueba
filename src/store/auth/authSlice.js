@@ -5,7 +5,9 @@ export const authSlice = createSlice({
     initialState: {
         status: 'not-authenticated',
         id: null,
-        fullName: null,
+        // fullName: null,
+        firstname: null,
+        lastname: null,
         email: null,
         brithday: null,
         username: null,
@@ -19,7 +21,9 @@ export const authSlice = createSlice({
 
             state.status = 'authenticated';
             state.id = payload.id;
-            state.fullName = `${payload.firstname} ${payload.lastname}`;
+            // state.fullName = `${payload.firstname} ${payload.lastname}`;
+            state.firstname = payload.firstname;
+            state.lastname = payload.lastname;
             state.email = payload.email;
             state.brithday = payload.brithday;
             state.username = payload.username;
