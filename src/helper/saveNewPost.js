@@ -1,7 +1,7 @@
 
 export const saveNewPost = async ( info )=>{
     
-     const resp = await fetch( "http://localhost:3004/post", {
+     const resp = await fetch( "http://localhost:3004/posts", {
          method: "POST",
          headers: {
              'Content-Type': 'application/json'

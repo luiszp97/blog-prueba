@@ -1,9 +1,12 @@
 import { Button, Grid, Link, TextField } from "@mui/material"
 import { useDispatch, useSelector } from "react-redux";
+import { Link as RouterLink, Navigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
-import { Link as RouterLink } from 'react-router-dom'
+
+
 import { startLoginUser } from "../../store/auth/thunks";
 import { AuthLayout } from "../layout"
+import { chekingCredentials } from "../../store/auth/authSlice";
 
 export const LoginPage = () => {
 
@@ -16,7 +19,9 @@ export const LoginPage = () => {
 
     const onSubmitLogin = (data)=>{
 
+        dispatch( chekingCredentials() ) ;
         dispatch( startLoginUser( data ) )
+
     }
 
   return (
@@ -58,9 +63,7 @@ export const LoginPage = () => {
             justifyContent='end' 
             sx={{mt:2}}
             >
-            <Link color='inherit' component={RouterLink} href='auth/register'>
-                crear cuenta
-            </Link>
+                <Link component={RouterLink} to='/auth/register' color='#000'>Create account</Link>
             </Grid>
         </form>
   </AuthLayout>

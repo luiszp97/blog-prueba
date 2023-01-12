@@ -7,13 +7,16 @@ import Swal from "sweetalert2"
 import 'sweetalert2/dist/sweetalert2.css'
 
 import { saveNewPost } from "../helper"
-import NavBar from "../ui/components/NavBar"
+import {NavBar} from "../ui/components"
+import { useNavigate } from "react-router-dom"
 
 export const CreateNewPost = () => {
 
-    const { register, handleSubmit, formState:{errors} } = useForm();
+    const { register, handleSubmit, formState:{errors}} = useForm();
+    const navigate = useNavigate()
 
-    const { id: userId } = useSelector( state => state.auth )
+    const { id: userId, firstname, lastname, myPosts } = useSelector( state => state.auth )
+
 
     const [isSaving, setisSaving] = useState(false);
 
@@ -22,17 +25,38 @@ export const CreateNewPost = () => {
         setisSaving(true);
 
         const date = new Date().getTime();
+        const userName = `${firstname}  ${lastname}`
         const id = Math.random().toString(36).substring(2, 18);
+        const comments = [];
 
-        const data = {...info, date, userId, id}
+        const data = {...info,date, userId, id, userName, comments}
 
         const resp = await saveNewPost(data);
 
         if(resp.ok){
             
             setisSaving(false);
-            Swal.fire('Exito', 'Tu post se guardo exitoxamente','success');
-            
+
+            Swal.fire({
+                title:'Exito', 
+                text:'Tu post se guardo exitoxamente',
+                icon:'success',
+                didClose: ()=>{
+                    navigate('/posts');
+                }
+                
+            });
+           
+        } else {
+
+            setisSaving(false);
+
+            Swal.fire({
+                title:'Error', 
+                text:'Ha ocurrido un error inesperado',
+                icon:'error'
+                
+            });
         }
 
     }
@@ -42,7 +66,6 @@ export const CreateNewPost = () => {
         <NavBar/>
         <Grid container
         bgcolor='primary.dark'
-        sx={{height: 'calc(100vh - 68.5px)', width: '100vw' }}
         direction = 'column'
         justifyContent='center'
         alignItems= 'center'
@@ -50,7 +73,7 @@ export const CreateNewPost = () => {
         <Grid item 
             bgcolor='white'
             xs = { 3 }
-            sx = { {width: {sm: 700}, padding: 4, borderRadius: 4 } }
+            sx = { {width: {sm: 700}, height: {sm:'auto'}, padding: 4, borderRadius: 4, margin:'50px 0' } }
             >
         <Typography variant= 'h4' textAlign='center'>
             Create new Post
@@ -88,10 +111,10 @@ export const CreateNewPost = () => {
                         placeholder='Entry the image url'
                         required
                         fullWidth
-                        {...register('imageUrl', {pattern: /^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/})}
+                        {...register('imageUrl')}
                     >
                 </TextField>
-                { errors.imageUrl?.type === "pattern" && <Alert severity = 'error'>Url invalida</Alert> }
+                
             </Grid>
             <Grid item xs = {12} sx= {{mt: 2}}>
                     <TextField

@@ -7,7 +7,9 @@
       "email": "a@a.com",
       "brithday": "",
       "username": "luiszp97",
-      "password": "123456"
+      "password": "123456",
+      "profilePic": "",
+      "myPosts": []
     },
     {
       "firstname": "carmen",
@@ -16,7 +18,9 @@
       "email": "ab@a.com",
       "password": "12345",
       "brithday": "2022-11-08",
-      "id": "2"
+      "id": "2",
+      "profilePic": "",
+      "myPosts": []
     },
     {
       "firstname": "gabriel",
@@ -25,44 +29,127 @@
       "email": "j@j.com",
       "password": "234",
       "brithday": "2022-11-12",
-      "id": "3"
+      "id": "3",
+      "profilePic": "",
+      "myPosts": []
+    },
+    {
+      "firstname": "Gabriel",
+      "lastname": "Cabrera",
+      "username": "ga045",
+      "email": "g@g.com",
+      "password": "Alejandro0397@@",
+      "brithday": "2023-01-25",
+      "id": "4"
     }
   ],
-  "post": [
+  "posts": [
     {
-      "postId": "1",
+      "title": "material ui",
+      "subtitle": "el mejor pre pocesador",
+      "imageUrl": "https://i.stack.imgur.com/lfsqE.png",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\nholaaaaa\n\n\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\n\n\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!",
+      "date": 1673377771061,
+      "userId": "1",
+      "id": "1",
+      "userName": "Luis  Zambrano",
+      "comments": [
+        {
+          "fullName": "Luis Zambrano",
+          "profilePic": null,
+          "date": 1673377813887,
+          "comment": "holaaa"
+        },
+        {
+          "fullName": "Luis Zambrano",
+          "profilePic": null,
+          "date": 1673377949409,
+          "comment": "kdjfbasdkjfba;sjkdbfk;jasdbfkjasdb"
+        },
+        {
+          "fullName": "carmen parra",
+          "profilePic": null,
+          "date": 1673378020749,
+          "comment": "hola que tal"
+        },
+        {
+          "fullName": "Luis Zambrano",
+          "profilePic": null,
+          "date": 1673470285140,
+          "comment": "holaaa"
+        }
+      ]
+    },
+    {
+      "title": "material ui",
+      "subtitle": "el mejor pre pocesador",
+      "imageUrl": "https://i.stack.imgur.com/lfsqE.png",
+      "content": "orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\n\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\n\n\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\norem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!",
+      "date": 1673377771061,
+      "userId": "1",
+      "id": "a7y9d6nx1f7",
+      "userName": "Luis  Zambrano",
+      "comments": [
+        {
+          "fullName": "Luis Zambrano",
+          "profilePic": null,
+          "date": 1673377933309,
+          "comment": "holaaaaa"
+        }
+      ]
+    },
+    {
+      "title": "sasha valentina",
+      "subtitle": "la mejor pug",
+      "imageUrl": "https://www.bunko.pet/__export/1620772617915/sites/debate/img/2021/05/11/pug_sonriente_crop1620772484805.jpeg_172596871.jpeg",
+      "content": "!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\n!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n\n!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!\n!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque facilis autem fugiat similique esse perferendis rem earum repellendus, voluptas quas laborum odit quod magnam maiores itaque! Quas, iste explicabo!",
+      "date": 1673378658222,
       "userId": "2",
-      "date": "22-11-2022",
-      "title": "Calentamiento Global",
-      "subtitle": "La tierra se seca",
-      "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur."
+      "id": "lwyd0uwq5rs",
+      "userName": "carmen  parra",
+      "comments": [
+        {
+          "fullName": "Gabriel Cabrera",
+          "profilePic": null,
+          "date": 1673470475355,
+          "comment": "bonito perro"
+        }
+      ]
     },
     {
-      "title": "Calentamiento Global",
-      "subtitle": "El mundo se seca",
-      "imageUrl": "https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg",
-      "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsam non enim similique distinctio officia asperiores blanditiis delectus porro quisquam sequi et illo itaque nisi quaerat nemo, in consequatur nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo veniam sit rem? Repellendus quidem beatae nesciunt sequi eaque sed dolores, quasi minus. Unde eligendi voluptatem quod blanditiis harum consequuntur.",
-      "date": 1670512361339,
-      "userId": null,
-      "id": "j4c9wjj6iy"
+      "title": "crazy imagineee!!",
+      "subtitle": "proximo trabajo ?",
+      "imageUrl": "https://curriculum.code.org/media/uploads/Screenshot-2019-05-06-at-3.40.00-PM.png",
+      "content": "hola mi nombre es luis zambrano tengo 25 a;os, soy estudiante de programacion, actualmente expecilizandome en React con mas de un a;o de estudio considero tener las habilidades necesarias para el puesto de trabajo sin mas a que hacer referencia me despido ",
+      "date": 1673380367217,
+      "userId": "2",
+      "id": "hcd9hiw5tto",
+      "userName": "carmen  parra",
+      "comments": [
+        {
+          "fullName": "Luis Zambrano",
+          "profilePic": null,
+          "date": 1673470248222,
+          "comment": "hola\n"
+        },
+        {
+          "fullName": "Gabriel Cabrera",
+          "profilePic": null,
+          "date": 1673470454680,
+          "comment": "holis"
+        }
+      ]
     },
     {
-      "title": "Calentamineto",
-      "subtitle": "global",
-      "imageUrl": "https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg",
-      "content": "https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg",
-      "date": 1670513303367,
-      "userId": null,
-      "id": "kh2y5wsln2"
-    },
-    {
-      "title": "Calentamineto",
-      "subtitle": "global",
-      "imageUrl": "https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg",
-      "content": "https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpghttps://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg",
-      "date": 1670513388431,
-      "userId": null,
-      "id": "x9gae2kgcur"
+      "title": "hola hola ",
+      "subtitle": "soy yo ",
+      "imageUrl": "https://www.bunko.pet/__export/1620772617915/sites/debate/img/2021/05/11/pug_sonriente_crop1620772484805.jpeg_172596871.jpeg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quibusdam, cum labore quaerat neque error consequatur nam, vitae voluptas dignissimos iure facilis voluptatem delectus laboriosam eligendi enim sunt quos.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quibusdam, cum labore quaerat neque error consequatur nam, vitae voluptas dignissimos iure facilis voluptatem delectus laboriosam eligendi enim sunt quos.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quibusdam, cum labore quaerat neque error consequatur nam, vitae voluptas dignissimos iure facilis voluptatem delectus laboriosam eligendi enim sunt quos.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quibusdam, cum labore quaerat neque error consequatur nam, vitae voluptas dignissimos iure facilis voluptatem delectus laboriosam eligendi enim sunt quos.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quibusdam, cum labore quaerat neque error consequatur nam, vitae voluptas dignissimos iure facilis voluptatem delectus laboriosam eligendi enim sunt quos.",
+      "date": 1673470690137,
+      "userId": "4",
+      "id": "ly3xxib69tl",
+      "userName": "Gabriel  Cabrera",
+      "comments": []
     }
   ]
 }

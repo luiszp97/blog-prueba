@@ -12,7 +12,7 @@ export const PrivateRoutes = () => {
         <Route path="profile/:id" element ={ <HomePage/> }/>
         <Route path="/post" element={ <CreateNewPost/> } />
         <Route path="/posts" element={ <PostsList/> } />
-        <Route path="/posts/*" element={ <PostView/> } />
+        <Route path="/posts/:id" element={ <PostView/> } />
 
         <Route path="/*" element={<Navigate to ={`profile/${id}`}/>} />
 

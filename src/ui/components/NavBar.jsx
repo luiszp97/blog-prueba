@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link as RouterLink, Navigate } from 'react-router-dom'
+import { Link as RouterLink, useNavigate } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,11 +15,17 @@ import MenuItem from '@mui/material/MenuItem';
 
 import { AutoStories } from '@mui/icons-material';
 import { Link } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { startLogout } from '../../store/auth/thunks';
 
-const pages = ['Perfil', 'Posts', 'Create New Post'];
+const pages = ['profile', 'posts', 'Create New Post'];
 const settings = ['profile', 'logout'];
 
-function NavBar() {
+export const NavBar = ()=> {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -38,8 +44,14 @@ function NavBar() {
     setAnchorElUser(null);
   };
 
-  const hola = (rote)=>{
-    location.href = `${rote}`
+  const handleClick = (typo)=>{
+    if(typo === 'logout'){
+      dispatch( startLogout() );
+    }else if( typo === 'Create New Post' ){
+      navigate('/post')
+    } else {
+      navigate(`/${typo}`)
+    }
   }
 
   return (
@@ -95,8 +107,8 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem color='red' key={page} onClick={handleCloseNavMenu} sx={{color:'red'}}>
-                  <Typography textAlign="center" color='red'>{page}</Typography>
+                <MenuItem key={page} onClick={handleCloseNavMenu} >
+                  <Link component={RouterLink} to = {`/${page}`} >{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -124,7 +136,7 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={()=>{handleCloseNavMenu; handleClick(page)}}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
@@ -156,7 +168,7 @@ function NavBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Link color = 'inherit' sx={{textDecoration:'none'}} component = {RouterLink} onClick={()=> hola(setting)}>{setting}</Link>
+                  <Link color = 'inherit' sx={{textDecoration:'none'}} onClick={()=> handleClick(setting)}>{setting}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -166,4 +178,3 @@ function NavBar() {
     </AppBar>
   );
 }
-export default NavBar;

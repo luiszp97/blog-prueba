@@ -6,6 +6,7 @@ import { getUserInfo } from "../helper/getUserInfo";
 import { BioInfo, PerfilInfo,PersonalityInfo, GoalsInfo, MotivationsInfo, FrustrationsInfo, MyPostList } from "../perfil/components"
 
 import { HomePageLayout } from "../perfil/layout"
+import {NavBar} from "../ui/components";
 
 
 
@@ -28,7 +29,8 @@ export const HomePage = () => {
   },[])
   
   return (
-
+      <>
+      <NavBar/>
       <HomePageLayout>
          <PerfilInfo info={(logedUserInfo.id !== id)? (userInfo !== null) && userInfo : logedUserInfo} />
          <BioInfo/>
@@ -38,6 +40,7 @@ export const HomePage = () => {
          <FrustrationsInfo/>
          <MyPostList/>
        </HomePageLayout>
+       </>
 
   )
 }

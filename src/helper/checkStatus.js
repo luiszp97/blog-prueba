@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { login } from "../store/auth/authSlice"
+import { login, logout } from "../store/auth/authSlice"
 
 export const checkStatus = () => {
     
@@ -12,6 +12,8 @@ export const checkStatus = () => {
       
         const userInfo = JSON.parse(localStorage.getItem('user'));
         dispatch( login(userInfo) )
+    } else {
+      dispatch( logout() )
     }
 
   },[])

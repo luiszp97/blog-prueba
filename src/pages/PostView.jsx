@@ -1,46 +1,119 @@
-import { Avatar, Grid, Typography } from "@mui/material"
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import { Avatar, Box, Dialog, Divider, Grid, IconButton, Typography } from "@mui/material"
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import SettingsIcon from '@mui/icons-material/Settings';
 
-import NavBar from "../ui/components/NavBar"
+import {NavBar , CommentsContainer,EditPost } from "../ui/components"
+import { getPostById } from "../helper";
+import { useSelector } from "react-redux";
+
 
 export const PostView = () => {
 
-    const nombre = 'Luis Zambrano';
-    const date = '08-12-2022'
+    const [data, setData] = useState(undefined);
+    const [date, setDate] = useState(null);
+    const [open, setOpen] = useState(false);
+
+    const { id: userId } = useSelector(state => state.auth);
+
+    const content = data?.content;
+    const text = content?.replace(/\r\n|\r|\n/g,"<br>");
+
+
+    const navigate = useNavigate();
+    const { id } = useParams();
+
+    const getData = async (id)=>{
+
+        const post = await getPostById(id);
+        const actualDate = post.date;
+        const newDate = new Date( actualDate );
+
+        setData(post);
+        setDate(newDate.toUTCString());   
+        
+    }
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+
+    useEffect(()=>{
+
+        getData(id)
+
+    },[id])
+
+   
+   
 
     const goToPerfil = ()=>{
-        console.log('perfil xd')
+        navigate('/profile')
     }
+
+    
 
   return (
     <>
         <NavBar/>
-        <Grid container bgcolor='primary.dark' sx={{padding:'0px 10%'}} flexDirection='column'>
+        {
+            data!== undefined && <Grid container bgcolor='primary.dark' sx={{padding:'0px 10%', minHeight:'calc(100vh - 68.5px)'}} flexDirection='column'>
             
-            <Typography variant="h4" fontWeight='500' textAlign='center' color='fontColor.main' mt={7} mb={3}> Calentamiento Global</Typography>
+            <Typography variant="h4" fontWeight='500' textAlign='center' color='fontColor.main' mt={7} mb={3}> {data.title} </Typography>
 
-            <Grid item height='50vh' width="80%" sx={{'img':{width:"100%", height:'auto', borderRadius:'8px'}}}>
+            <Grid item display='flex' justifyContent='center' sx={{'img':{borderRadius:'8px', width:'60vw', height:'50vh'}}}>
                 <img
-                    src="https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg"
+                    src={data.imageUrl}
                 />
             </Grid>
 
-            <Grid item mt={3} display='flex' alignItems='center' sx={{padding:'0px 60px'}}>
-              
+            <Grid item mt={3} mb={3} display='flex' justifyContent='space-between' sx={{padding:'0px 150px'}}>
+              <Box display='flex' alignItems='center'>
+                
                 <Avatar src="https://img.freepik.com/foto-gratis/foto-generica-longitud-completa-chica-joven-moda-cafe-vistiendo-sudadera-negra-corredores-zapatillas-negras-sobre-cesped-verde-ciudad_132075-9210.jpg" onClick={goToPerfil} sx={{marginRight:'20px', cursor:'pointer'}} />
                 <Typography variant="caption">by  </Typography>
-                <Typography variant="caption" component='a' onClick={goToPerfil} sx={{textDecoration:'underline', marginLeft:'5px', cursor:'pointer'}}> {nombre} </Typography>
+                <Typography variant="caption" component='a' onClick={goToPerfil} sx={{textDecoration:'underline', marginLeft:'5px', cursor:'pointer'}}> {data.userName} </Typography>
                 <CalendarMonthIcon sx={{marginLeft:'20px', marginRight:'20px',color:'fontColor.main'}}/>
                 <Typography variant='caption' >{date}</Typography>
 
+              </Box>
+
+                <Box display={data.userId === userId ? 'block' : 'none'}>
+                    <IconButton onClick={handleClickOpen} sx={{ ':hover':{borderRadius:'0'}, width:{} }}>
+                        <SettingsIcon/>
+                        <Typography>Edit your post</Typography>
+                    </IconButton>
+                </Box>
+
             </Grid>
 
-            <Typography textAlign='justify' color="fontColor.main" sx={{padding:'0px 60px', marginTop:'20px'}}>
+            <Dialog open={open} onClose={handleClose} sx={{zIndex:"1"}}>
+                <EditPost data = {data}/>
+            </Dialog>
+
+            <Typography component='div' dangerouslySetInnerHTML={{__html:text}} textAlign='justify' mb={5} color="fontColor.main" sx={{padding:'0px 60px', marginTop:'20px'}}>
                 
             </Typography>
-           
+
+            <Divider/>
+            <Typography textAlign='center' mb={3} mt={1}> 
+                Coments 
+            </Typography>
+
+            {
+                data !== undefined ? <CommentsContainer postData = {data}/> : 'nope'
+            }
+
         </Grid>
+        }
     </>
   )
 }

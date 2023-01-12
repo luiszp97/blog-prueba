@@ -10,9 +10,9 @@ export const AppRoutes = () => {
 
  const status = checkStatus();
  
- if(status !== "authenticated"){
+ if(status === "checking"){
     return <Loading/>
- }
+ } 
 
   return (
     <Routes>
@@ -22,7 +22,7 @@ export const AppRoutes = () => {
             :<Route path="auth/*" element={ <AuthRoutes/> }/>
 
         }
-        <Route path="/*" element = {<Navigate to = '/auth/login' />}/>
+        <Route path="/*" element = {<Navigate to = '/auth/' />}/>
 
     </Routes>
   )

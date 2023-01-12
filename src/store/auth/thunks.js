@@ -1,4 +1,4 @@
-import { errorRegister, login } from "./authSlice";
+import { errorRegister, login, logout } from "./authSlice";
 
 export const startRegisterUser = ( info )=>{
 
@@ -60,3 +60,10 @@ export const startLoginUser = ( info ) => {
     }
 };
 
+
+export const startLogout = ()=>{
+    return async (dispatch) =>{
+       const resp = localStorage.clear()
+       dispatch ( logout() )
+    }
+}
